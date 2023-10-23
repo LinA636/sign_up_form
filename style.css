@@ -1,9 +1,22 @@
 :root{
   /* colors */
-  --color_credit_text: white;
+  --color_credit_text: black;
+  --background_color_right_side: lightgrey;
+  --background_color_form_box: white;
+  --button_background_color: green;
+  --button_text_color: white;
+
+  /* field input*/
+  --color_field_border: lightgrey;
+  --border_radius: 5px;
+
 
   /* FONT style*/
-  --text-family: "Norse Bold"
+  --text-family: "Norse Bold";
+
+  /* Gap sizes */
+  --gap_btw_fields: 20px;
+
 }
 
 html, body{
@@ -13,9 +26,11 @@ html, body{
   min-height: 100%;
 }
 
-* {
-  border: 1px solid black;
+*{
+ margin: 0px;
+ padding: 0px;
 }
+
 
 body{
   height: 100vh;
@@ -40,7 +55,7 @@ body{
 
 .logo_container{
   align-self: stretch;
-  background-color: black;
+  background-color: white;
   opacity: 0.5;
 
   display: flex;
@@ -55,7 +70,6 @@ body{
 .logo_container h1{
   color: var(--color_credit_text);
   font-size: 90px;
-  opacity: 1;
 }
  
 .pic_credit {
@@ -63,25 +77,77 @@ body{
 }
 
 /* right side of the website */
-.right_side {
+.\.right_side {
   flex: 2;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+
+  background-color: var(--background_color_right_side);
+}
+
+.\.right_side h2 {
+  margin: 20px;
+}
+
+.field_container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40px;
 }
 
 .field_container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: space-around;
+  align-items: stretch;
+
+  padding: 20px;
+  background-color: var(--background_color_form_box);
 }
 
-.form_fields {
+.form_field_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: var(--gap_btw_fields);
+}
+
+.form_field_container div {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
+.field_container label{
+  text-transform: uppercase;
+}
+
+.field_container input{
+  border-color: var(--color_field_border);
+  border-radius: var(--border_radius);
+}
+
+button {
+  align-self: self-start;
+  margin-left: 20px;
+
+  background-color: var(--button_background_color); /* Green color */
+  color: var(--button_text_color); /* Text color */
+  border: solid; /* Remove default button border */
+  border-color: black;
+  border-radius: 8px; /* Add rounded corners */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.log_in_link {
+  margin-left: 20px;
+}

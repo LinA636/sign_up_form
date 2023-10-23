@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sign up form</title>
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+
+    <!-- left side of the website -->
+    <div class="left_side">
+      <div class="logo_container"> 
+        <img src="images/Phenix.png" alt="rising phenix">
+        <h1>RISE</h1>
+      </div>
+    
+      <p class="pic_credit">
+        Photo by Halie West on Unsplash
+      </p>
+    </div>
+
+    <!-- right side of the website -->
+    <div class=".right_side">
+      <h2>
+        What fun it will be to fill out this sign-up example!
+      </h2>
+      <div class="field_container">
+        <h2>Let's do this!</h2>
+        
+        <form action="" method="get">
+          <div class="form_field_container">
+            <div>
+              <label for="first_name">First Name</label>
+              <input type="text" id="first_name" autocomplete="additional-name" required>
+            </div>
+            
+            <div>
+              <label for="last_name">Last Name</label>
+              <input type="text" id="last_name" autocomplete="additional-name">
+            </div>
+          </div>
+
+          <div class="form_field_container">
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" autocomplete="email" required>
+            </div>
+
+            <div>
+              <label for="phone_number">Phone Number</label>
+              <input type="tel">
+            </div>
+          </div>
+
+          <div class="form_field_container">
+            <div>
+              <label for="password">Password</label>
+              <input type="password" id="password" required required minlength="6" maxlength="8" pattern="[a-zA-Z0-9]+">
+            </div>
+            
+            <div>
+              <label for="confirm_password">Confirm Password</label>
+              <input type="password" id="confirm_password" required>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <button class="create_button">Create Account</button>
+
+      <p class="log_in_link">
+        Already got an account? <a href="html/log_in.html">Log in</a>
+      </p>
+    </div>
+
+  </body>
+</html>
